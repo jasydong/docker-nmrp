@@ -32,5 +32,13 @@ services:
     networks:
       - default
 
+  php72:
+    image: php:${PHP_VERSION}
+    volumes:
+      - ${SOURCE_DIR}:/var/www/html/:rw
+    restart: always
+    networks:
+      - default
+
 networks:
   default:
