@@ -36,6 +36,7 @@ services:
     image: ${PHP_IMAGE}
     volumes:
       - ${SOURCE_DIR}:/var/www/html/:rw
+      - ${PHP_CONF_DIR}:/usr/local/etc/php/conf.d/:rw
     restart: always
     networks:
       - default
