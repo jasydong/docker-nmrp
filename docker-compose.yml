@@ -33,7 +33,7 @@ services:
       - default
 
   php72:
-    image: php:${PHP_VERSION}
+    image: ${PHP_IMAGE}
     volumes:
       - ${SOURCE_DIR}:/var/www/html/:rw
     restart: always
